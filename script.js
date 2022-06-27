@@ -45,9 +45,20 @@ function clickPixelPaint() {
     }
   });
 }
+function clickClearBoard() {
+  const button = document.getElementById('clear-board');
+  button.addEventListener('click', () => {
+    const pixels = document.querySelectorAll('.pixel');
+    pixels.forEach((pixel) => {
+      const { style } = pixel;
+      style.backgroundColor = 'white';
+    });
+  });
+}
 
 generateRandomColors();
 generateColors();
 addPixels(5);
 clickColorSelector();
 clickPixelPaint();
+clickClearBoard();
