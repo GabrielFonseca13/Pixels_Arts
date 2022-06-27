@@ -55,10 +55,23 @@ function clickClearBoard() {
     });
   });
 }
-
+function selectBoardSize() {
+  const button = document.getElementById('generate-board');
+  button.addEventListener('click', () => {
+    const input = document.getElementById('board-size');
+    if (input.value < 0) {
+      alert('Board inválido!');
+    } else if (input.value > 0 && input.value < 5) {
+      addPixels(5);
+    } else if (input.value > 50) {
+      addPixels(50);
+    } else addPixels(input.value);
+  });
+}
 generateRandomColors();
 generateColors();
 addPixels(5);
 clickColorSelector();
 clickPixelPaint();
 clickClearBoard();
+selectBoardSize();

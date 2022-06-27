@@ -22,10 +22,6 @@
   justify-content: left;
 }
 
-#clear-board {
-  margin-top: 25px;
-}
-
 .row {
   margin-top: 20px;
   display: flex;
@@ -38,7 +34,14 @@
   border: 1px solid black;
   margin: 5px;
 }
-
+#board-size{
+  margin-top:25px ;
+  margin-left: 75px;
+}
+#clear-board {
+  margin-top: 25px;
+  margin-left: 100px;
+}
 #footer {
   margin-top: 25px;
   margin-bottom: 0;
