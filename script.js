@@ -24,7 +24,30 @@ function addPixels(size) {
     pixelBoard.appendChild(rowElement);
   }
 }
+function clickColorSelector() {
+  const colorPalette = document.getElementById('color-palette');
+  colorPalette.addEventListener('click', (event) => {
+    const color = event.target;
+    if (color.classList.contains('color')) {
+      const selected = document.querySelector('.selected');
+      selected.classList.remove('selected');
+      color.classList.add('selected');
+    }
+  });
+}
+function clickPixelPaint() {
+  const pixelBoard = document.getElementById('pixel-board');
+  pixelBoard.addEventListener('click', (event) => {
+    const pixel = event.target;
+    if (pixel.classList.contains('pixel')) {
+      const selectedColor = document.querySelector('.selected');
+      pixel.style.backgroundColor = selectedColor.style.backgroundColor;
+    }
+  });
+}
 
 generateRandomColors();
 generateColors();
 addPixels(5);
+clickColorSelector();
+clickPixelPaint();
