@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+#title{
+    margin-left: 5px;
+}
 
 .color{
     width: 50px;
@@ -19,7 +22,7 @@
 #color1{
     background-color: black;
 }
-#color2{
+/* #color2{
     background-color: red;
 }
 #color3{
@@ -27,4 +30,8 @@
 }
 #color4{
     background-color: yellow;
+} */
+#footer{
+    margin-bottom: 0;
+    color: green;
 }
